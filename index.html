@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<header>
+    <header>
+        <div
+            class="container mx-auto px-[20px] fixed top-2 right-0 left-0 flex items-center justify-between gap-[30px] bg-white z-50">
+
+            <form class="w-full mx-auto">
+                <label for="default-search"
+                    class="mb-2 text-sm font-medium text-gray-900 sr-only ">Search</label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
+                    </div>
+                    <input type="search" id="default-search"
+                        class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Search Mockups, Logos..." required />
+                    <button type="submit"
+                        class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+                </div>
+            </form>
+
+
+            <select id="countries"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-[200px] p-2.5 z-50 relative">
+                <option selected>Lavozimi</option>
+                <option value="US">Rektr</option>
+                <option value="CA">zam direktr</option>
+                <option value="FR">Bug'alter</option>
+                <option value="DE">O'qtuvchi</option>
+            </select>
+            <select id="countries"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-[200px] p-2.5 z-50 relative">
+                <option selected>Manzili</option>
+                <option value="Toshkent Shaxar">Toshkent Shaxar</option>
+                <option value="Qashqadaryo">Qashqadaryo</option>
+                <option value="Andijon">Andijon</option>
+                <option value="Qoqon">Qoqon</option>
+            </select>
+            <button id="add-student-btn" class="bg-blue-700 text-white rounded-lg px-5 py-1">Student qo'shish</button>
+        </div>
+    </header>
+
+    </div>
+</header>
+
+<body>
+
+
+
+    <div class="container mx-auto p-[20px] relative overflow-x-auto shadow-md sm:rounded-lg pt-[70px]">
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="px-6 py-3">
+                        No
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Ism
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Familya
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Manzil
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Tug'ilgn kuni
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Lavozm
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Lavozim turi
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Maoshi
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Uylanganm
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Faolyat
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <div id="outer-modal" class="hidden fixed left-0 right-0 top-50 bg-white z-100">
+        <form id="inner-modal" class=" max-w-md mx-auto">
+            <div class="relative z-0 w-full mb-5 group">
+                <input type="text" name="floating_email" id="floating_email"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" " required />
+                <label for="floating_email"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Ismingizni
+                    kriting</label>
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+                <input type="text" name="floating_password" id="floating_password"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" " required />
+                <label for="floating_password"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Familyangizni
+                    kriting</label>
+            </div>
+            <select id="countries"
+                class="bg-gray-50 w-full border border-gray-300 text-gray-900 text-sm rounded-lg block w-[200px] p-2.5 z-50 relative">
+                <option selected>Manzili</option>
+                <option value="Toshkent Shaxar">Toshkent Shaxar</option>
+                <option value="Qashqadaryo">Qashqadaryo</option>
+                <option value="Andijon">Andijon</option>
+                <option value="Qoqon">Qoqon</option>
+            </select>
+            <div class="grid md:grid-cols-2 md:gap-6 pt-[10px]  ">
+                <div class="relative z-0 w-full mb-5 group">
+                    <input type="date" name="floating_first_name" id="floating_first_name"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  peer"
+                        placeholder=" " required />
+                    <label for="floating_first_name"
+                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Tug'ilgan
+                        kun</label>
+                </div>
+                <select id="countries"
+                    class="w-full h-[45px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-[200px] p-1 z-50 relative">
+                    <option selected>Lavozimi</option>
+                    <option value="US">Rektr</option>
+                    <option value="CA">zam direktr</option>
+                    <option value="FR">Bug'alter</option>
+                    <option value="DE">O'qtuvchi</option>
+                </select>
+            </div>
+            <div class="grid md:grid-cols-2 md:gap-6">
+                <select id="countries"
+                    class="w-full h-[45px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-[200px] p-2.5 z-50 relative">
+                    <option selected>Lavozimi turi</option>
+                    <option value="US">Kata O"qtuvchi</option>
+                    <option value="CA">Yordamchi O'qtuvchi</option>
+                    <option value="FR">Bug'alter</option>
+                    <option value="DE">O'qtuvchi</option>
+                </select>
+                <div class="relative z-0 w-full mb-5 group">
+                    <input type="number" name="floating_company" id="floating_company"
+                        class="block py-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none  dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        placeholder=" " required />
+                    <label for="floating_company"
+                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Maoshi
+                    </label>
+                </div>
+                <div class="flex pb-[20px]">
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div class="flex gap-[10px] items-center justify-end">
+                <button type="submit"
+                    class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Yopish</button>
+                <button type="submit"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Qo'shish</button>
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
